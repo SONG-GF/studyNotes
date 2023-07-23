@@ -1,0 +1,58 @@
+{
+//  编译器的选项
+  "compilerOptions": {
+
+
+//    设置编译后代码使用的模块化系统
+    "module": "commonjs",
+
+//    用来指定ts被编译成ES的版本
+    "target": "es2015",
+    "sourceMap": true,
+
+//    outDir 用来指定编译之后文件所在的目录
+    "outDir": "./dist",
+
+//    将代码合并为一个文件
+//    设置outFile之后，所有的全局作用域中的代码会合并到同一个文件之中
+//    "outFile": "./dist/app.js"
+
+//    "lib": [] 用来指定项目使用到的库，一般不需要设置
+
+    //  是否对js文件进行编译，默认是false
+    "allowJs": false,
+    //  是否检查js代码是否符合语法规范，默认是false
+    "checkJs": false,
+    //  是否移除注释
+    "removeComments": true,
+    //  不生成编译后的文件
+    "noEmit": false,
+
+    //当有错误时不生成编译后的文件
+    "noEmitOnError": true,
+
+   //用来设置编译后的文件是否使用严格模式，默认是false
+    "alwaysStrict": true,
+//    不允许隐式的any类型
+    "noImplicitAny": true,
+//    不允许不明确类型的this
+    "noImplicitThis": true,
+
+//    严格的检查空值
+    "strictNullChecks": true,
+//    所有的严格检查开头
+"strict": true,
+
+  },
+  //  "include"表示用来指定那些ts文件需要被编译
+  //  路径：** 表示任意目录  *表示任意文件夹
+  "include": [
+    "./src/**/*"
+  ],
+
+  //  “exclude”表示 不需要被编译的文件目录
+  //  一般有默认值 ["node_modules", "bower_components", "jspm_packages"]
+  "exclude": [
+    "node_modules"
+  ]
+}
